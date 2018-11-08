@@ -16,7 +16,8 @@ void date_::setDay(int day)
 void date_::setMonth(int month)
 {
 
-	if (month < 1 || month>12)	month = 1;
+	if (month < 1 || month>12)	
+		month = 1;
 
 	this->month = month;
 }
@@ -71,12 +72,12 @@ date_ & date_::operator+=(const date_ & obj)
 	this->day += obj.day;
 	this->month += obj.month;
 	this->year += obj.year;
-	if (this->day > 31) {
+	if (this->day > 31) 
 		this->day = 1;
-	}
-	if (this->month > 12) {
+	
+	if (this->month > 12) 
 		this->month = 1;
-	}
+	
 	return *this;
 }
 
@@ -85,15 +86,14 @@ date_ & date_::operator-=(const date_ & obj)
 	this->day -= obj.day;
 	this->month -= obj.month;
 	this->year -= obj.year;
-	if (this->day < 1) {
+	if (this->day < 1) 
 		this->day = 1;
-	}
-	if (this->month < 1) {
+	
+	if (this->month < 1)
 		this->month = 1;
-	}
-	if (this->year < 1900) {
+
+	if (this->year < 1900) 
 		this->year = 1900;
-	}
 
 	return *this;
 }
@@ -103,13 +103,12 @@ date_ & date_::operator*=(const date_ & obj)
 	this->day *= obj.day;
 	this->month *= obj.month;
 	this->year *= obj.year;
-	if (this->day > 31)	{
+	if (this->day > 31)	
 		this->day = 1;
-	}
-	if (this->month > 12) {
+	
+	if (this->month > 12) 
 		this->month = 1;
-	}
-
+	
 	return *this;
 }
 
@@ -118,15 +117,15 @@ date_ & date_::operator/=(const date_ & obj)
 	this->day /= obj.day;
 	this->month /= obj.month;
 	this->year /= obj.year;
-	if (this->day < 1) {
+	if (this->day < 1) 
 		this->day = 1;
-	}
-	if (this->month < 1) {
+	
+	if (this->month < 1) 
 		this->month = 1;
-	}
-	if (this->year < 1900) {
+
+	if (this->year < 1900) 
 		this->year = 1900;
-	}
+	
 	return *this;
 }
 
@@ -135,14 +134,13 @@ date_ & date_::operator+=(int number)
 	this->day += number;
 	this->month += number;
 	this->year += number;
+	
 	if (this->day > 31)
-	{
 		this->day = 1;
-	}
+	
 	if (this->month > 12)
-	{
 		this->month = 1;
-	}
+	
 	return *this;
 }
 
@@ -151,15 +149,15 @@ date_ & date_::operator-=(int number)
 	this->day -= number;
 	this->month -= number;
 	this->year -= number;
-	if (this->day < 1) {
+	if (this->day < 1) 
 		this->day = 1;
-	}
-	if (this->month < 1) {
+	
+	if (this->month < 1) 
 		this->month = 1;
-	}
-	if (this->year < 1900) {
+	
+	if (this->year < 1900) 
 		this->year = 1900;
-	}
+	
 	return *this;
 }
 
@@ -168,12 +166,12 @@ date_ & date_::operator*=(int number)
 	this->day *= number;
 	this->month *= number;
 	this->year *= number;
-	if (this->day > 31)	{
+	if (this->day > 31)	
 		this->day = 1;
-	}
-	if (this->month > 12) {
+	
+	if (this->month > 12) 
 		this->month = 1;
-	}
+	
 	return *this;
 }
 
@@ -182,15 +180,15 @@ date_ & date_::operator/=(int number)
 	this->day /= number;
 	this->month /= number;
 	this->year /= number;
-	if (this->day < 1) {
+	if (this->day < 1) 
 		this->day = 1;
-	}
-	if (this->month < 1) {
+	
+	if (this->month < 1) 
 		this->month = 1;
-	}
-	if (this->year < 1900) {
+	
+	if (this->year < 1900) 
 		this->year = 1900;
-	}
+	
 	return *this;
 }
 date_ & date_::operator++()
