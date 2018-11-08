@@ -188,8 +188,8 @@ date_ & date_::operator/=(int number)
 	if (this->month < 1) {
 		this->month = 1;
 	}
-	if (this->year < 1970) {
-		this->year = 1970;
+	if (this->year < 1900) {
+		this->year = 1900;
 	}
 	return *this;
 }
